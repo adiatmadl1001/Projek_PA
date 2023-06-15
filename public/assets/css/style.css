@@ -1,0 +1,22 @@
+#sidebar.hide ~ #content {
+	width: calc(100% - 60px);
+	left: auto;
+}
+
+#sidebar {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--light);
+    overflow-y: hidden;
+}
+
+#content nav {
+    position: absolute !important;
+    top: 0;
+    left: 280px;
+    width: calc(100% - 280px);
+    z-index: 2000;
+}
