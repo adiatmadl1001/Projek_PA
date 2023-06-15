@@ -11,4 +11,15 @@ class Tagihan extends Model
 
     public $table = 'tr_tagihan';
 
+    public $appends = ['bulan'];
+
+    public function getTotalKWH()
+    {
+        return $this->kwh_before - $this->kwh_after;
+    }
+
+    public function  getBulan()
+    {
+        return $this->created_at->format('F');
+    }
 }
